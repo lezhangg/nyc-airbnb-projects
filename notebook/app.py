@@ -3,9 +3,12 @@ import pandas as pd
 import numpy as np
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
+import os
+
+file_path = os.path.dirname(os.path.abspath(__file__))
 
 # load artifacts
-with open('model_artifacts.pkl', 'rb') as f:
+with open(os.path.join(file_path, 'model_artifacts.pkl'), 'rb') as f:
     artifacts = pickle.load(f)
 
 feature_matrix = artifacts['feature_matrix']
@@ -13,7 +16,7 @@ feature_columns = artifacts['feature_columns']
 weights_adjusted = artifacts['weights_adjusted']
 scaler = artifacts['scaler']
 
-listings_rec = pd.read_csv('listings_rec.csv')
+listings_rec = pd.read_csv(os.path.join(SCRIPT_DIR, 'listings_rec.csv'))
 
 # recommender function
 def recommend_hybrid(user_prefs, alpha=0.7, top_n=5):
