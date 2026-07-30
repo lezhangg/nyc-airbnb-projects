@@ -16,7 +16,7 @@ feature_columns = artifacts['feature_columns']
 weights_adjusted = artifacts['weights_adjusted']
 scaler = artifacts['scaler']
 
-listings_rec = pd.read_csv(os.path.join(SCRIPT_DIR, 'listings_rec.csv'))
+listings_rec = pd.read_csv(os.path.join(file_paths, 'listings_rec.csv'))
 
 # recommender function
 def recommend_hybrid(user_prefs, alpha=0.7, top_n=5):
