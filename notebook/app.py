@@ -5,10 +5,10 @@ import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-file_path = os.path.dirname(os.path.abspath(__file__))
+file_paths = os.path.dirname(os.path.abspath(__file__))
 
 # load artifacts
-with open(os.path.join(file_path, 'model_artifacts.pkl'), 'rb') as f:
+with open(os.path.join(file_paths, 'model_artifacts.pkl'), 'rb') as f:
     artifacts = pickle.load(f)
 
 feature_matrix = artifacts['feature_matrix']
