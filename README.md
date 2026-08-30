@@ -5,8 +5,6 @@ Three connected data science projects using Inside Airbnb NYC data
 find what drives occupancy, use it to recommend listings, then check 
 whether guest language backs up the story.
 
-## Live demo
-Try the recommendation system: [NYC Airbnb Recommender](https://lezhangg-nyc-airbnb-projects-notebookapp-bc9xuk.streamlit.app/)
 
 ---
 
